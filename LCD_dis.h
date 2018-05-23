@@ -90,7 +90,9 @@ extern void Display_Init(void);
 extern void Diplay_Closed(void);
 /** 
  * @brief  中文提示区名称部分滚动显示函数
- * @note   这个函数要放在定时器中，定时执行，当中文提示区名称显示不下时，会自动启用
+ * @note   这个函数要定时执行，当中文提示区名称显示不下时，会自动启用
+ * 建议定义个执行标志位，定时器中断中置执行标志位，然后在主循环中判断执行
+ * 标志位，当置1时允许本函数，否则不运行。
  * @retval None
  */
 extern void RollDiplay_ChineseHintArea(void);

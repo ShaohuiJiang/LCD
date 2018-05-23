@@ -569,7 +569,7 @@ static void Fill_Engery_In_ChineseHintArea(PHASE_TYPE phase,ENERGY_TYPE engeryty
     }
 
     //最后写电量二字
-    strcat(strbuf,"电量");
+    strcat(strbuf,"电量量");
     //刷新LCD_RAM和backupbuf的点阵数据
     Fill_Char_In_ChineseHintArea(strbuf,-1);
 }
